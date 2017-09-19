@@ -139,3 +139,17 @@ mutation(["hello", "hey"]);
 // Array.prototype.every() only breaks when return 'false'.
 //  - It only breaks the loop and nth return (you'll have to add return infront of .every() )
 // === END ====
+
+//Falsy Bouncer
+function bouncer(arr) {
+  return arr.filter(a=>{
+    if(a){return a }
+  })
+}
+bouncer([7, "ate", "", false, 9]);
+// Boolean
+//  - new Boolean() vs Boolean()
+//    - new Boolean() makes an object with PrimitiveValue of it;
+//    - Do not use a Boolean object to convert a non-boolean value to a boolean value. Instead, use Boolean as a function to perform this task
+//    - More info : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+// === END ====
