@@ -100,7 +100,6 @@ function truncateString(str, num) {
   return (num >= str.length ? str : str.slice(0,(num<=3?num:num-3)) + '...');
 }
 truncateString("A-tisket a-tasket A green and yellow basket", 11);
-
 // === END ====
 
 //Chunky Monkey
@@ -115,5 +114,15 @@ function chunkArrayInGroups(arr, size) {
   return result;
 }
 chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)
+// === END ====
 
+//Slasher Flick
+function slasher(arr, howMany) {
+  if(howMany >= arr.length){
+    return [];
+  }
+  arr.splice(0, howMany);
+  return arr;
+}
+slasher([1, 2, 3], 3);
 // === END ====
