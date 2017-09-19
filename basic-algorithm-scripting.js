@@ -136,4 +136,6 @@ function mutation(arr) {
   })
 }
 mutation(["hello", "hey"]);
+// Array.prototype.every() only breaks when return 'false'.
+//  - It only breaks the loop and nth return (you'll have to add return infront of .every() )
 // === END ====
