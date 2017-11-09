@@ -153,3 +153,13 @@ bouncer([7, "ate", "", false, 9]);
 //    - Do not use a Boolean object to convert a non-boolean value to a boolean value. Instead, use Boolean as a function to perform this task
 //    - More info : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 // === END ====
+
+//Seek and Destroy
+function destroyer(arr) {
+  const args = Array.from(arguments);
+  return arr.filter(v=>{
+    return args.indexOf(v)<0
+  })
+}
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+// === END ====
