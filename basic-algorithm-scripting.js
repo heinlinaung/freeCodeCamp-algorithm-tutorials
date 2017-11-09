@@ -163,3 +163,10 @@ function destroyer(arr) {
 }
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 // === END ====
+
+//Where do I belong
+function getIndexToIns(arr, num) {
+  return [...arr, num].sort((a,b)=> { return a - b }).indexOf(num)
+}
+getIndexToIns([40, 60], 50);
+// === END ====
