@@ -61,3 +61,17 @@ function whatIsInAName(collection, source) {
 }
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" })
 // === END ====
+
+//Search and Replace
+function myReplace(str, before, after) {
+  if(before[0] === before[0].toUpperCase()){
+    after = after.charAt(0).toUpperCase() + after.slice(1);
+  }
+  let strArr = str.split(' ');
+  strArr.splice(strArr.indexOf(before),1,after).join(' ');
+  return strArr.join(' ');
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+
+// === END ====
