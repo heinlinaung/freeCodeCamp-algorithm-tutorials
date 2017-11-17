@@ -101,3 +101,17 @@ function pairElement(str) {
 
 pairElement("GCG");
 // === END ====
+
+//Missing letters
+function fearNotLetter(str) {
+  let result='';
+  [...str].map((ele, idx)=>{
+    if(str.charCodeAt(idx+1) && (str.charCodeAt(idx+1)-str.charCodeAt(idx) !== 1)){
+      result += String.fromCharCode(str.charCodeAt(idx)+1);
+    }
+  });
+  return result? result : undefined;
+}
+
+fearNotLetter("abce");
+// === END ====
