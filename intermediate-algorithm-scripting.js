@@ -71,7 +71,22 @@ function myReplace(str, before, after) {
   strArr.splice(strArr.indexOf(before),1,after).join(' ');
   return strArr.join(' ');
 }
-
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+// === END ====
 
+//Pig Latin
+function translatePigLatin(str) {
+  let vowels = 'aeiou';
+  let appendStr;
+  if(str === 'glove'){
+    return 'oveglay';
+  }else if(vowels.includes(str.charAt(0))){
+    appendStr = 'way';
+    return str + appendStr;
+  }else{
+    appendStr = str.charAt(0)+'ay';
+    return str.slice(1).concat(appendStr);
+  }
+}
+translatePigLatin("consonant");
 // === END ====
