@@ -90,3 +90,14 @@ function translatePigLatin(str) {
 }
 translatePigLatin("consonant");
 // === END ====
+
+//DNA Pairing
+function pairElement(str) {
+  let tmplStr = 'ATACGC';
+  return [...str].map(s=>{
+    return (s+tmplStr[tmplStr.indexOf(s)+1]).split('')
+  })
+}
+
+pairElement("GCG");
+// === END ====
