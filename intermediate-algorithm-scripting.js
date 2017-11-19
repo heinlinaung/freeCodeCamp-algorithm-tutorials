@@ -115,3 +115,11 @@ function fearNotLetter(str) {
 
 fearNotLetter("abce");
 // === END ====
+
+//Boo Who
+function booWho(bool) {
+  return typeof bool === 'boolean';
+}
+
+booWho(null);
+// === END ====
