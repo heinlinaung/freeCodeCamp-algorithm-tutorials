@@ -130,3 +130,11 @@ function uniteUnique(arr) {
 }
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 // === END ====
+
+//Convert HTML Entities
+function convertHTML(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,"&apos;");
+}
+
+convertHTML("Dolce & Gabbana");
+// === END ====
