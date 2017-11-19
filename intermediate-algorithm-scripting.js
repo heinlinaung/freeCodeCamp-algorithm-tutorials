@@ -123,3 +123,10 @@ function booWho(bool) {
 
 booWho(null);
 // === END ====
+
+//Sorted Union
+function uniteUnique(arr) {
+  return ([].concat.apply([],arguments)).filter((ele,idx,orgArr)=>{return orgArr.indexOf(ele) === idx });
+}
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+// === END ====
