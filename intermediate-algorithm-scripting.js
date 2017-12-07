@@ -167,4 +167,23 @@ function sumFibs(num) {
 sumFibs(4);
 // === END ====
 
+// Sum All Primes
+function sumPrimes(num) {
+  if(num === 1) {return 0}
+  const isPrime = (number) => {
+    let start = 2;
+    while (start <= Math.sqrt(number)) {
+        if (number % start++ < 1) return false;
+    }
+    return number > 1;
+  }
 
+  let newArr = [ ...Array(num+1).keys() ];
+  newArr.shift();
+  return newArr.filter(ele=>{
+    return isPrime(ele)
+  }).reduce((a,b)=>{return a+b})
+}
+
+sumPrimes(10);
+// === END ====
